@@ -154,32 +154,21 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#features">Features <i class="nav-angle"></i></a>
                                     <div class="nav">
-                                        <a class="nav-link" href="#user-features">User Features</a>
-                                        <a class="nav-link" href="#authentication">Authentication</a>
-                                        <a class="nav-link" href="#profile-management">Profile Management</a>
-                                        <a class="nav-link" href="#post-management">Post Management</a>
-                                        <a class="nav-link" href="#comment-system">Comment System</a>
-                                        <a class="nav-link" href="#likes-repost">Likes & Repost</a>
-                                        <a class="nav-link" href="#quote-tweets">Quote Tweets</a>
+                                        <a class="nav-link" href="#user-features">User</a>
+                                        <a class="nav-link" href="#post-management">Post/Comment/Quote</a>
                                         <a class="nav-link" href="#chat-messaging">Chat & Messaging</a>
                                         <a class="nav-link" href="#treasure-hunt">Treasure Hunt</a>
-                                        <a class="nav-link" href="#treasure-hunt-types">Treasure Hunt Types</a>
-                                        <a class="nav-link" href="#token-nft">Token and NFT System</a>
-                                        <a class="nav-link" href="#rtt">Raven Trust Token (RTT)</a>
-                                        <a class="nav-link" href="#nft">Non-Fungible Tokens (NFTs)</a>
+                                        <a class="nav-link" href="#token-nft">Token and NFT</a>
                                     </div>
                                 </li>
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="#future-work">Future Work <i class="nav-angle"></i></a>
                                     <div class="nav">
-                                        <a class="nav-link" href="#enhanced-quest">Enhanced Quest Participation</a>
-                                        <a class="nav-link" href="#private-groups">Private Groups & Exclusive
-                                            Content</a>
-                                        <a class="nav-link" href="#advanced-chat">Advanced Chat Features</a>
+                                        <a class="nav-link" href="#enhanced-quest">Enhanced Treasure Hunt Features</a>
+                                        <a class="nav-link" href="#expanded-social">Expanded Social Featurest</a>
                                         <a class="nav-link" href="#governance">Dynamic On-Chain Governance</a>
-                                        <a class="nav-link" href="#cross-platform">Cross-Platform Integration</a>
-                                        <a class="nav-link" href="#smart-contract">Smart Contract Enhancements</a>
+
                                     </div>
                                 </li>
                             </ul>
@@ -592,8 +581,9 @@ RAVEN/
                             non-deterministic value using
                             <pre class="language-markup line-numbers"><code>await oracle.notarize(() => )</code></pre>
                             <p>For exapmle in Raven Backend implementation, The notarize function was used to return a
-                                UUID for every new entry into the database. <strong>(All Oracle implementation in Raven is done
-                                in the <code>util.js file</code> and then referenced across)</strong></p>
+                                UUID for every new entry into the database. <strong>(All Oracle implementation in Raven
+                                    is done
+                                    in the <code>util.js file</code> and then referenced across)</strong></p>
                             <pre class="language-markup line-numbers"><code>export const genId = async (req) => {
     const callbackUrl = req.headers["x-callback-url"];
     var oracle = new Oracle(callbackUrl);
@@ -702,68 +692,81 @@ RAVEN/
                     <hr class="hr-dash my-7">
                     <h2 id="features">Features</h2>
 
-
-
-
-                    <h3 id="user-features">User Features</h3>
-                    <h3 id="authentication">Authentication</h3>
+                    <h3 id="user-features">User</h3>
+                    <h5 id="authentication">Authentication</h5>
                     <p>Raven ensures secure user authentication through the Chopin Framework, enabling decentralized
                         identity verification. Users can securely log in and manage their accounts while leveraging
                         blockchain-based authentication for increased security and trust.</p>
 
 
-                    <hr class="hr-dash my-7">
-                    <h3 id="profile-management">Profile Management</h3>
+                    <h5 id="profile-management">Profile Management</h5>
                     <p>Users can create and manage their profiles, including setting up avatars, bios, and other
                         details. Profile customization enhances user experience and engagement within the Raven
                         ecosystem.</p>
 
                     <hr class="hr-dash my-7">
-                    <h3 id="post-management">Post Management</h3>
-                    <p>Users can create, edit, delete, and retrieve tweets. Each post is securely stored on the Celestia
-                        blockchain, ensuring tamper-proof and immutable content storage.</p>
-
-                    <hr class="hr-dash my-7">
-                    <h3 id="comment-system">Comment System</h3>
+                    <h3 id="post-management">Post/Comment/Quote</h3>
+                    <h5 id="post">Post</h5>
+                    <p>Users can create and retrieve post. Each post is securely stored on the Celestia blockchain,
+                        ensuring tamper-proof and immutable content storage.</p>
+                    <h5 id="comment-system">Comment System</h5>
                     <p>Raven supports a nested reply system, allowing users to engage in dynamic discussions under
                         posts. Each comment is stored securely on the blockchain, maintaining data integrity.</p>
-
-                    <hr class="hr-dash my-7">
-                    <h3 id="likes-repost">Likes and Repost</h3>
-
-
-                    <h3 id="quote-tweets">Quote Tweets</h3>
-                    <p>Users can quote tweets, adding their thoughts and context while referencing original posts,
+                    <h5 id="likes-repost">Likes and Repost</h5>
+                    <p>Users can interact with posts through likes and reposts, contributing to the decentralized social
+                        media experience. These interactions are also recorded on-chain, ensuring transparency and
+                        authenticity.</p>
+                    <h5 id="quote-tweets">Quote</h5>
+                    <p>Users can quote a post, adding their thoughts and context while referencing original posts,
                         further enriching the discussion within the Raven platform.</p>
 
                     <hr class="hr-dash my-7">
                     <h3 id="chat-messaging">Chat and Messaging</h3>
-                    <p>Raven provides a decentralized chat system with end-to-end encryption (E2EE), ensuring private
-                        and secure messaging between users. All chat-related data is stored on-chain, enhancing security
-                        and reliability.</p>
+                    <p style="text-align:justify;">Raven’s Chat & Messaging system is designed to offer a secure and
+                        decentralized communication experience. Unlike traditional messaging platforms that rely on
+                        centralized servers, Raven employs end-to-end encryption (E2EE), ensuring that only the intended
+                        recipients can access the messages.
+                        This encryption mechanism protects user conversations from potential breaches, maintaining
+                        privacy and confidentiality. Additionally, all messages are stored on-chain, reinforcing data
+                        integrity and preventing unauthorized alterations or deletions. By leveraging blockchain
+                        technology,
+                        Raven ensures that users can communicate without the risk of censorship or third-party
+                        interference, fostering a more open and secure social environment. Beyond basic messaging, Raven
+                        integrates a chat gifting system, where users can send Raven Trust Tokens (RTT) as gifts,
+                        incentivizing engagement and strengthening community bonds.
+                        These features collectively transform Raven’s messaging system into a robust, blockchain-powered
+                        communication hub, redefining social interactions in the decentralized space.</p>
 
                     <hr class="hr-dash my-7">
                     <h3 id="treasure-hunt">Treasure Hunt</h3>
-                    <p>The Treasure Hunt feature is designed to increase engagement by allowing users to participate in
-                        gamified quests with rewards. Only verified Raven users can create hunts, while any user can
-                        participate.</p>
-
-                    <hr class="hr-dash my-7">
-                    <h3 id="treasure-hunt-types">Treasure Hunt Types</h3>
+                    <p style="text-align:justify;">Raven’s Treasure Hunt feature introduces a gamified experience
+                        designed to drive user engagement and participation. This system allows users to take part in
+                        blockchain-based quests, where they can solve challenges to earn rewards. Only verified users
+                        can create Treasure Hunts,
+                        ensuring authenticity and quality control, while all users are welcome to participate. The hunts
+                        are securely recorded on-chain, ensuring fairness and transparency in reward distribution.
+                        By integrating this feature, Raven not only adds an interactive element to the platform but also
+                        encourages community-driven challenges that foster engagement and competition.
+                        There are two types of Treasure Hunts within the Raven ecosystem </p>
                     <ul>
-                        <li><b>Cumulative Reward Hunt</b>: Users pay an entry fee (set by the creator) in Raven Trust
-                            Token (RTT), and the first to complete the quest wins the entire pooled reward.</li>
-                        <li><b>Fixed Reward Hunt</b>: The creator sets a fixed reward in RTT, and participants join for
-                            free. The first user to solve the quest wins the pre-determined reward.</li>
+                        <li><b>Cumulative Reward Hunt</b></li>
+                        <li><b>Fixed Reward Hunt</b></li>
                     </ul>
+                    <p style="text-align:justify;">In a Cumulative Reward Hunt, participants pay an entry fee in Raven
+                        Trust Tokens (RTT), and the total amount is awarded to the first user who successfully completes
+                        the quest. On the other hand, a Fixed Reward Hunt allows participants to join for free, with the
+                        creator setting a predetermined reward in RTT for the winner. These dynamic reward mechanisms
+                        ensure an exciting experience while providing users with opportunities to earn and utilize RTT
+                        within the ecosystem. By blending blockchain technology with gamification, Raven transforms
+                        social media interactions into an engaging and rewarding adventure</p>
 
 
                     <hr class="hr-dash my-7">
-                    <h3 id="token-nft">Token and NFT System</h3>
+                    <h3 id="token-nft">Token and NFT</h3>
 
-                    <h3 id="rtt">Raven Trust Token (RTT)</h3>
-                    <p>RTT serves as the native utility token within the Raven ecosystem, facilitating multiple use
-                        cases.</p>
+                    <h5 id="rtt">Raven Trust Token (RTT)</h5>
+                    <p>Raven Trust Token (RTT) is the native utility token powering the Raven ecosystem, facilitating
+                        various transactions and interactions within the platform.</p>
                     <ul>
                         <li><b>Minting Verification Badges</b>: Users pay an entry fee (set by the creator) in Raven
                             Trust Token (RTT), and the first to complete the quest wins the entire pooled reward.</li>
@@ -773,13 +776,30 @@ RAVEN/
                             distribute rewards</li>
                         <li><b>Chat Gifting System</b>: Users can send RTT as gifts within the chat feature, promoting
                             user interactions and incentivizing engagement</li>
-                        <li><b></b>: </li>
                     </ul>
 
-                    <h3 id="nft">Raven Verification Badge (RVB NFTs)</h3>
+                    <h5 id="nft">Raven Verification Badge (RVB NFTs)</h5>
                     <p>RVB Nft was introduce to serve as a verification method on the raven platform, minting a badge
                         grant user verification on the raven app, which give user access to premium features.</p>
 
+
+                    <hr class="hr-dash my-7">
+                    <h2 id="future-work">Future Work</h2>
+
+                    <h5 id="enhanced-quest">Enhanced Treasure Hunt Features</h5>
+                    <ul>
+                        <li>Verified users can set participation tasks, such as following a specific account before
+                            joining a hunt.</li>
+                        <li>Private groups for verified users to share exclusive content and create members-only quests
+                            with rewards.</li>
+                    </ul>
+
+                    <h5 id="expanded-social">Expanded Social Features</h5>
+                    <ul>
+                        <li>More interactive engagement mechanics, including polls and community challenges.</li>
+                        <li>Improved content curation for trending post and discussions.</li>
+                        <li>Increased security and anti-spam measures through AI moderation tools.</li>
+                    </ul>
 
 
 
