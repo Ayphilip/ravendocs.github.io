@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Raven - Docs</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/gh/Ayphilip/appPics@main/page.min.css" rel="stylesheet">
+
+    <!-- <link href="../assets/css/style.css" rel="stylesheet"> -->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" href="../assets/img/favicon.png">
+
+    <style>
+        .block-number {
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.8125em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #191919;
+            -webkit-transition: 0.3s ease-out;
+            transition: 0.3s ease-out;
+        }
+
+        .block-number:hover {
+            opacity: 1;
+        }
+
+        .block-number::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 6px;
+            margin-bottom: 2px;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 3px solid #191919;
+        }
+
+        .block-number a:hover,
+        .block-number a:focus {
+            color: #191919;
+        }
+
+        .demo-section .main-content .section,
+        .main-content .topbar,
+        .main-content .navbar,
+        .main-content .header,
+        .main-content .footer {
+            margin: 30px 20px 100px;
+            border: 1px solid #f5f6f7;
+            -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .main-content .navbar {
+            position: static;
+            margin: 0;
+        }
+
+        /*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".nav-sidebar" data-offset="100">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark">
+        <div class="container">
+
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="#">
+                    <img class="logo-dark" style="width: 20%;"
+                        src="https://pbs.twimg.com/profile_images/1894310856894062592/jcW84a7m_400x400.jpg" alt="logo">
+                    <img class="logo-light" style="width: 20%;"
+                        src="https://pbs.twimg.com/profile_images/1894310856894062592/jcW84a7m_400x400.jpg" alt="logo">
+                </a>
+            </div>
+
+
+
+            <a class="btn btn-sm btn-round btn-success" href="">Docs</a>
+
+        </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header class="header" style="background-color: #f1f6fa">
+        <div class="container">
+            <h1>Raven Docs</h1>
+            <p class="lead">Documentation Information about the features, technologies and application of other
+                technologies (Chopin Framework) in the application.</p>
+        </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+
+
+                <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Sidebar
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+                <div class="col-md-4 col-xl-3">
+                    <aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
+                        <div class="sidebar-body">
+                            <ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#get-started">Getting started <i
+                                            class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#intro">Introduction</a>
+                                        <!-- <a class="nav-link" href="#about">About</a> -->
+                                        <a class="nav-link" href="#setup">Setup</a>
+                                        <a class="nav-link" href="#structure">Project Structure</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tech">Technologies <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#frontend">Frontend</a>
+                                        <a class="nav-link" href="#backend">Backend</a>
+                                        <a class="nav-link" href="#database">Database</a>
+                                        <a class="nav-link" href="#api">REST API</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#chopin">Chopin Framework <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#chopd">npx chopd</a>
+                                        <a class="nav-link" href="#core">@chopinframework/core</a>
+                                        <a class="nav-link" href="#react">@chopinframework/react</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#features">Features <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#user-features">User Features</a>
+                                        <a class="nav-link" href="#authentication">Authentication</a>
+                                        <a class="nav-link" href="#profile-management">Profile Management</a>
+                                        <a class="nav-link" href="#post-management">Post Management</a>
+                                        <a class="nav-link" href="#comment-system">Comment System</a>
+                                        <a class="nav-link" href="#likes-repost">Likes & Repost</a>
+                                        <a class="nav-link" href="#quote-tweets">Quote Tweets</a>
+                                        <a class="nav-link" href="#chat-messaging">Chat & Messaging</a>
+                                        <a class="nav-link" href="#treasure-hunt">Treasure Hunt</a>
+                                        <a class="nav-link" href="#treasure-hunt-types">Treasure Hunt Types</a>
+                                        <a class="nav-link" href="#token-nft">Token and NFT System</a>
+                                        <a class="nav-link" href="#rtt">Raven Trust Token (RTT)</a>
+                                        <a class="nav-link" href="#nft">Non-Fungible Tokens (NFTs)</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#future-work">Future Work <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#enhanced-quest">Enhanced Quest Participation</a>
+                                        <a class="nav-link" href="#private-groups">Private Groups & Exclusive
+                                            Content</a>
+                                        <a class="nav-link" href="#advanced-chat">Advanced Chat Features</a>
+                                        <a class="nav-link" href="#governance">Dynamic On-Chain Governance</a>
+                                        <a class="nav-link" href="#cross-platform">Cross-Platform Integration</a>
+                                        <a class="nav-link" href="#smart-contract">Smart Contract Enhancements</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+
+                <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Content
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+                <div class="col-md-7 col-xl-8 ml-md-auto py-8">
+                    <h2 id="get-started">Getting started</h2>
+                    <p class="lead-2">Raven is a decentralized Web3 social application built as an X (Twitter) clone,
+                        leveraging blockchain technology for secure data storage. Unlike traditional social media
+                        platforms, Raven ensures data integrity, immutability, and enhanced security by storing posts,
+                        interactions, and user details on the Celestia blockchain. The application is developed using
+                        the Chopin Framework, allowing seamless Web3 integration.</p>
+
+
+                    <hr class="hr-dash my-7">
+
+
+                    <h3 id="intro">Introduction</h3>
+                    <p>Raven is designed to empower users with full control over their data while offering a familiar
+                        and intuitive microblogging experience.
+
+                        <img src="https://pbs.twimg.com/profile_banners/1894278067792547840/1740473893/1500x500" />
+
+                        Key features include:<br />
+
+                        <b>Decentralized Storage:</b> All tweets and interactions are stored securely on the Celestia
+                        blockchain.<br />
+
+                        <b>Immutable Content:</b> No central authority can alter or delete posts once published.<br />
+
+                        <b>Web3 Authentication:</b> Users sign in using blockchain-based authentication instead of
+                        traditional
+                        credentials.<br />
+
+                        <b>Peer-to-Peer Interactions:</b> Enables decentralized conversations and encrypted
+                        messaging.<br />
+
+                    </p>
+
+
+                    <!-- <hr class="hr-dash my-7"> -->
+
+
+                    <!-- <h3 id="about">About</h3>
+                    <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward
+                        tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own.
+                        Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility
+                        domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
+                    <br>
+                    <p><a class="btn btn-outline-primary" href="#">Download</a></p> -->
+
+
+                    <hr class="hr-dash my-7">
+
+
+                    <h3 id="setup">Setup</h3>
+                    <p>To setup Raven, follow these steps.</p>
+                    <h5>Prerequisites</h5>
+                    <ul>
+                        <li><a href="https://nodejs.org/">Node.js</a> (LTS version recommended)</li>
+                        <li><a href="https://chopin.sh">Chopin CLI</a> (<code>npx chopd</code>)</li>
+                        <li><a href="https://firebase.google.com/docs/firestore/quickstart"> Firebase Configuration </a>
+                        </li>
+                        <li>ReactJs Vite</li>
+                    </ul>
+                    <h5>Installation</h5>
+                    <ol>
+                        <li>Clone the Raven repository:
+                            <pre
+                                class="language-markup line-numbers"><code>git clone https://github.com/Ayphilip/raven.git</code><br/><code>cd raven</code></pre>
+                        </li>
+                        <li>Install Dependencies for Backend:
+                            <pre class="language-markup line-numbers"><code>yarn install
+# or
+npm install</code></pre>
+                        </li>
+                        <li>Install Dependencies for Frontend:
+                            <pre class="language-markup line-numbers"><code>cd frontend
+npm install</code></pre>
+                        </li>
+                        <li>Initialize Chopin Framework on root folder:
+                            <pre class="language-markup line-numbers"><code>npx chopd init</code></pre>
+                        </li>
+                        <li>Run Application:<br />
+                            <span>on backend</span>
+                            <pre class="language-markup line-numbers"><code>npx chopd init</code></pre>
+                            <span>on frontend</span>
+                            <pre class="language-markup line-numbers"><code>cd frontend
+npm run dev</code></pre>
+                        </li>
+                        <li>Open Application:<br />
+
+                            <pre
+                                class="language-markup line-numbers"><code>- Backend: http://localhost:4000/<br/>- Frontend: http://localhost:5173/</code></pre>
+
+                        </li>
+                    </ol>
+
+                    <h5>Firebase Setup</h5>
+                    <p>Follow the <a href="https://firebase.google.com/docs/firestore/quickstart">[Firebase
+                            Documentation]</a> to
+                        initialize and create a new Firestore database.</p>
+                    <p>Environment Variables: Create a <code>.env</code> file in the root directory and add the
+                        following:</p>
+
+                    <ol>
+                        <li>Clone the Raven repository:
+                            <pre class="language-markup line-numbers"><code>FIREBASE_API_KEY=your_api_key
+FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+FIREBASE_APP_ID=your_app_id
+FIREBASE_MEASUREMENT_ID=your_measurement_id</code></pre>
+                        </li>
+                    </ol>
+
+                    <h5>Deployment</h5>
+                    <ol>
+                        <li>Clone the Raven repository:
+                            <pre
+                                class="language-markup line-numbers"><code>git clone https://github.com/Ayphilip/raven.git</code><br/><code>cd raven</code></pre>
+                        </li>
+                        <li>Install Dependencies and build application:
+                            <pre class="language-markup line-numbers"><code>npm run build</code></pre>
+                        </li>
+                        <li>Start Application:<br />
+                            <span>on Root folder</span>
+                            <pre class="language-markup line-numbers"><code>npx chopd</code></pre>
+                        </li>
+                        <li>Open Application:<br />
+
+                            <pre
+                                class="language-markup line-numbers"><code>- Application: http://localhost:4000/</code></pre>
+
+                        </li>
+                    </ol>
+
+
+
+                    <hr class="hr-dash my-7">
+
+
+                    <h3 id="structure">Project Structure</h3>
+                    <pre class="language-markup line-numbers"><code>
+RAVEN/
+│── .chopin/              # Chopin framework configuration files
+│── backend/              # Backend application
+│   ├── config/           # Configuration files (including Firebase setup)
+│   ├── controller/       # Controller logic
+│   ├── routes/           # API routes
+│   ├── index.js          # Main backend entry file
+│   ├── util.js           # Utility functions, including Chopin framework (Oracle) functionalities
+│
+│── frontend/             # Frontend application
+│   ├── .vite/            # Vite build settings
+│   ├── assets/           # Static assets (images, fonts, etc.)
+│   ├── dist/             # Build output directory
+│   ├── node_modules/     # Installed dependencies
+│   ├── public/           # Public assets (favicon, etc.)
+│   ├── src/              # React source code
+│   ├── .gitignore        # Git ignore rules
+│   ├── eslint.config.js  # ESLint configuration
+│   ├── index.html        # Main HTML file
+│   ├── package.json      # Frontend dependencies
+│   ├── package-lock.json # Dependency lock file
+│   ├── vite.config.js    # Vite configuration
+│
+│── node_modules/         # Root dependencies
+│── .env                  # Environment variables
+│── .gitignore            # Git ignore rules
+│── chopin.config.json    # Global Chopin configuration
+│── package.json          # Root dependencies
+│── package-lock.json     # Root lock file
+│── README.md             # Project documentation
+                        </code></pre>
+
+
+
+                    <hr class="hr-dash my-7">
+
+
+
+
+                    <h2 id="tech">Technologies</h2>
+                    <p class="lead-2">Raven is built using modern web development technologies for scalability and
+                        performance. It utilizes a modular architecture to ensure maintainability and efficiency. The
+                        frontend and backend communicate seamlessly through a well-structured REST API, and real-time
+                        updates enhance user interactions. The application follows best security practices, including
+                        authentication and authorization mechanisms to protect user data.
+                    </p>
+                    <hr class="hr-dash my-7">
+                    <h3 id="frontend">Frontend</h3>
+
+                    <ul>
+                        <li>Framework: React (Vite for fast development)</li>
+                        <li>Styling: Tailwind CSS</li>
+                        <li>State Management: Context Providers</li>
+                        <li>Authentication: Chopin Framework</li>
+                        <li>Deployment: Vercel</li>
+                    </ul>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="backend">Backend</h3>
+
+                    <ul>
+                        <li>Framework: Node.js with Express</li>
+                        <li>Authentication: Chopin Framework</li>
+                        <li>Real-time Updates: Websockets (Socket.io) and Firebase Real-time</li>
+                    </ul>
+                    <h3 id="database">Database</h3>
+
+                    <ul>
+                        <li>Type: Firestore</li>
+                        <li>Features: Scalability, real-time updates, indexing for fast queries</li>
+                    </ul>
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="api">REST API</h3>
+                    <p>The backend provides a RESTful API for managing user interactions, posts, likes and follows.</p>
+
+                    <h5>Users</h5>
+                    <ul>
+                        <li>
+                            <code>POST /api/users</code> - Create or check user
+                        </li>
+                        <li>
+                            <code>GET /api/users/:username</code> - Get user by username
+                        </li>
+                        <li>
+                            <code>GET /api/users</code> - Get all users
+                        </li>
+                        <li>
+                            <code>PUT /api/users/:username</code> - Update user profile
+                        </li>
+                        <li>
+                            <code>POST /api/users/follow</code> - Follow a user
+                        </li>
+                        <li>
+                            <code>POST /api/users/unfollow</code> - Unfollow a user
+                        </li>
+                        <li>
+                            <code>POST /api/users/addnotifier</code> - Add a notifier
+                        </li>
+                        <li>
+                            <code>POST /api/users/bookmark</code> - Bookmark a tweet
+                        </li>
+
+                    </ul>
+                    <h5>Tweets</h5>
+                    <ul>
+                        <li><code>POST /api/tweets</code> - Create a tweet</li>
+                        <li><code>GET /api/tweets/:tweetId</code> - Get a tweet by ID</li>
+                        <li><code>GET /api/tweets</code> - Get all tweets</li>
+                        <li><code>POST /api/tweets/like</code> - Like or unlike a tweet</li>
+                        <li><code>POST /api/tweets/retweet</code> - Retweet a tweet</li>
+                        <li><code>DELETE /api/tweets/:tweetId</code> - Delete a tweet</li>
+                    </ul>
+
+                    <h5>Tokens</h5>
+                    <ul>
+                        <li><code>GET /api/tokens</code> - Get token details</li>
+                        <li><code>POST /api/tokens/create</code> - Create a new token</li>
+                        <li><code>GET /api/tokens/max-supply/:symbol</code> - Get max supply of a token</li>
+                        <li><code>GET /api/tokens/circulating-supply/:symbol</code> - Get total circulating supply</li>
+                        <li><code>GET /api/tokens/balance/:address/:symbol</code> - Check user balance</li>
+                        <li><code>POST /api/tokens/mint</code> - Mint tokens</li>
+                        <li><code>POST /api/tokens/transfer</code> - Transfer tokens</li>
+                    </ul>
+
+                    <h5>Notifications</h5>
+                    <ul>
+                        <li><code>POST /api/notifications/send</code> - Send a notification</li>
+                        <li><code>GET /api/notifications/:userId</code> - Get notifications for a user</li>
+                        <li><code>PATCH /api/notifications/read</code> - Mark notification as read</li>
+                        <li><code>DELETE /api/notifications/delete</code> - Delete a notification</li>
+                        <li><code>DELETE /api/notifications/clear/:userId</code> - Clear all notifications</li>
+                    </ul>
+
+                    <h5>NFTs</h5>
+                    <ul>
+                        <li><code>GET /api/nft</code> - Get NFTs</li>
+                        <li><code>POST /api/nft/collection</code> - Create NFT collection</li>
+                        <li><code>POST /api/nft/mint</code> - Mint an NFT</li>
+                        <li><code>GET /api/nft/:collectionName/:nftId</code> - Get NFT owner</li>
+                    </ul>
+
+                    <h5>Chats</h5>
+                    <ul>
+                        <li><code>POST /api/chats/initialize</code> - Initialize a new chat</li>
+                        <li><code>POST /api/chats/send</code> - Send a message</li>
+                        <li><code>GET /api/chats/:userId/:receiverId</code> - Fetch messages</li>
+                        <li><code>POST /api/chats/seen/:userId/:receiverId</code> - Mark messages as seen</li>
+                        <li><code>GET /api/chats/:userId</code> - Get all chats</li>
+                    </ul>
+                    <h5>Treasure Hunt</h5>
+                    <ul>
+                        <li><code>POST /api/quests</code> - Create a quest</li>
+                        <li><code>GET /api/quests</code> - Get all quests</li>
+                        <li><code>GET /api/quest/:questId</code> - Get a single quest</li>
+                        <li><code>POST /api/quest/join</code> - Join a quest</li>
+                        <li><code>POST /api/quest/addClues</code> - Add a quest clue</li>
+                        <li><code>POST /api/quest/guess</code> - Submit a guess</li>
+                        <li><code>GET /api/quest/live/:questId</code> - Subscribe to quest updates</li>
+                        <li><code>GET /api/quest/listen/:questId</code> - Listen to quest updates</li>
+                    </ul>
+                    <h5>Search</h5>
+                    <ul>
+                        <li><code>POST /api/search</code> - Make a search</li>
+                    </ul>
+                    <hr class="hr-dash my-7">
+
+
+                    <h2 id="chopin">Chopin Framework</h2>
+                    <p>Raven leverages the Chopin Framework to seamlessly integrate blockchain security while
+                        maintaining the familiar web development experience. Chopin transforms Raven into a sovereign
+                        rollup and embeds a Multi-Party Computation (MPC) wallet directly in the browser, ensuring a
+                        frictionless user experience.</p>
+                    <p>Implementing Chopin Framework, Raven achieves decentralized security while maintaining a
+                        user-friendly, accessible, and scalable design.</p>
+
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="chopd">npx chopd – CLI Tool for Chopin Framework</h3>
+                    <p>
+                        <code>chopd</code> is a command-line interface (CLI) tool designed to streamline
+                        <strong>development and testing</strong> for applications built with the <strong>Chopin
+                            Framework</strong>.
+                        It provides a <strong>reverse proxy</strong> with enhanced request handling, identity
+                        simulation,
+                        and WebSocket pass-through.
+                    </p>
+
+                    <h4>Getting Started with <code>npx chopd</code></h4>
+                    <p>To initialize an application with the Chopin Framework, run the following command:</p>
+
+                    <pre class="language-markup line-numbers"><code>npx chopd init</code></pre>
+
+                    <p>
+                        This command initializes the application, creates a <strong>Chopin configuration JSON
+                            file</strong>,
+                        and sets up the reverse proxy to the desired port.
+                    </p>
+
+                    <h4>Chopin Configuration (<code>chopin.config.json</code>)</h4>
+                    <p>After running <code>npx chopd init</code>, a configuration file is generated with the following
+                        structure:</p>
+
+                    <pre class="language-markup line-numbers"><code>{
+    "command": "npm start",
+    "proxyPort": 4000,
+    "targetPort": 5000
+}</code></pre>
+
+
+                    <h5>Configuration Parameters</h5>
+                    <ul>
+                        <li><strong><code>command</code></strong>: The CLI command to start the backend deployment
+                            (e.g., in this case <code>"npm start"</code>).</li>
+                        <li><strong><code>proxyPort</code></strong>: The port where the backend will be accessible
+                            through the proxy.</li>
+                        <li><strong><code>targetPort</code></strong>: The actual backend deployment port.
+                            <code>chopd</code> will forward requests from the proxy port to this port.
+                        </li>
+                    </ul>
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="core">@chopinframework/core</h3>
+                    <p>
+                        With <code>@chopinframework/core</code> installed on the backend, Raven ensures
+                        secure, trustless interactions, handling identity, transactions, and data
+                        integrity on-chain.
+                    </p>
+
+                    <h3>Using Chopin Oracle in Raven</h3>
+                    <p>When initializing an Oracle in Raven, an instance of the Oracle is created with a redirect URL
+                        passed into the initialization request. To transmit data on-chain, Chopin intercepts all POST,
+                        PUT, UPDATE, and PATCH requests. The backend then reads the <code>x-callback-url</code> header,
+                        which is injected by Chopin’s reverse proxy.</p>
+                    <pre class="language-markup line-numbers"><code>app.post("/hello", (req, res) => {
+    const callbackUrl = req.headers["x-callback-url"];
+    const oracle = new Oracle(callbackUrl);
+});</code></pre>
+                    <p>
+                        The Chopin Oracle is integrated into the backend to bring <strong>non-deterministic
+                            data</strong> into Raven.
+                        This allows the application to process:
+                    </p>
+                    <ul>
+                        <li><strong>Real-time external data</strong> from third-party APIs and websites. using
+                            <pre
+                                class="language-markup line-numbers"><code>await oracle.fetch(https://example.com)</code></pre>
+                        </li>
+                        <li><strong>Current timestamps</strong> for event tracking. using
+                            <pre class="language-markup line-numbers"><code>await oracle.now()</code></pre>
+                        </li>
+                        <li><strong>Random numbers</strong> for cryptographic security, polling, and other dynamic
+                            features.
+                            <pre class="language-markup line-numbers"><code>await oracle.random()</code></pre>
+                        </li>
+                        <li><strong>Non-Deterministic Value</strong> It can also be usedd to return arbitrary
+                            non-deterministic value using
+                            <pre class="language-markup line-numbers"><code>await oracle.notarize(() => )</code></pre>
+                            <p>For exapmle in Raven Backend implementation, The notarize function was used to return a
+                                UUID for every new entry into the database. <strong>(All Oracle implementation in Raven is done
+                                in the <code>util.js file</code> and then referenced across)</strong></p>
+                            <pre class="language-markup line-numbers"><code>export const genId = async (req) => {
+    const callbackUrl = req.headers["x-callback-url"];
+    var oracle = new Oracle(callbackUrl);
+    var Id = await oracle.notarize(() => crypto.randomUUID())
+    return Id;
+};</code></pre>
+                        </li>
+                    </ul>
+
+                    <h5>How Chopin Oracle Works as mentioned by <a href="https://chopin.sh">https://chopin.sh</a></h5>
+                    <ol>
+                        <li>
+                            Listening for Context
+                            <p>
+                                The <strong>sequencer</strong> listens for "<strong>context</strong>" from the request
+                                handler
+                                while executing a request.
+                                If context is reported, it is <strong>added on-chain</strong> in the order it was
+                                received.
+                            </p>
+                        </li>
+                        <li>
+                            Processing External Data
+                            <p>
+                                The backend reads the <code>x-callback-url</code> header injected by Chopin’s reverse
+                                proxy.
+                                This header contains the URL of the reporting server that will send data to the
+                                sequencer.
+                            </p>
+                        </li>
+                        <li>
+                            Reporting Non-Deterministic Data
+                            <p>
+                                When Raven’s backend generates external or random data, it submits a <strong>POST
+                                    request</strong> to:
+                            </p>
+                            <pre class="language-markup line-numbers"><code>/_chopin/report-context</code></pre>
+                            <p>
+                                The request body contains the value to be stored and retrieved later.
+                                When a request is <strong>re-executed</strong>, Raven fetches the recorded value instead
+                                of
+                                regenerating it.
+                            </p>
+                        </li>
+                    </ol>
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="react">@chopinframework/react</h3>
+
+                    <p>
+                        The <strong>Chopin Framework</strong> is a robust and versatile solution that can be integrated
+                        into
+                        any platform, whether on the backend or frontend. The <code>@chopinframework/react</code>
+                        package
+                        is specifically designed for integrating the Chopin Framework within a <strong>React
+                            deployment</strong>.
+                    </p>
+
+                    <p>
+                        In this application, built as a <strong>React Vite</strong> project,
+                        <code>@chopinframework/react</code> is utilized to handle <strong>user authentication</strong>
+                        and assign user addresses before they are managed by the application's state management system.
+                    </p>
+
+                    <p>
+                        The package provides the <code>useAddress()</code> function, which allows easy retrieval
+                        of the authenticated user’s blockchain address.
+                    </p>
+                    <pre class="language-markup line-numbers"><code>import { useAddress } from "@chopinframework/react";
+ 
+    function MyComponent() {
+    const { address, isLoading, isLoginError, login, logout, revalidate } = useAddress();
+                         
+        if (isLoading) {
+            return <div>Loading...</div>;
+        }
+        
+        if (isLoginError) {
+            return <div>Error logging in</div>;
+        }
+        
+        if (address) {
+            return (
+                <div>
+                    <p>Logged in as {address}</p>
+                    <button onClick={logout}>Logout</button>
+                    <button onClick={revalidate}>Refresh</button>
+                </div>
+            );
+        }
+                         
+    return <button onClick={login}>Login</button>;
+}</code></pre>
+
+                    <h3>Benefits of Using Chopin framework in Raven</h3>
+                    <ul>
+                        <li><strong>Trustless Oracle Data</strong> – Ensures <strong>verifiable external data</strong>
+                            on-chain.</li>
+                        <li><strong>Immutable Record Keeping</strong> – All context is securely <strong>logged and
+                                retrievable</strong> from the sequencer.</li>
+                        <li><strong>Seamless Web3 Experience</strong> – Users interact naturally while Raven maintains
+                            <strong>blockchain security</strong> behind the scenes.
+                        </li>
+                    </ul>
+
+                    <hr class="hr-dash my-7">
+                    <h2 id="features">Features</h2>
+
+
+
+
+                    <h3 id="user-features">User Features</h3>
+                    <h3 id="authentication">Authentication</h3>
+                    <p>Raven ensures secure user authentication through the Chopin Framework, enabling decentralized
+                        identity verification. Users can securely log in and manage their accounts while leveraging
+                        blockchain-based authentication for increased security and trust.</p>
+
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="profile-management">Profile Management</h3>
+                    <p>Users can create and manage their profiles, including setting up avatars, bios, and other
+                        details. Profile customization enhances user experience and engagement within the Raven
+                        ecosystem.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="post-management">Post Management</h3>
+                    <p>Users can create, edit, delete, and retrieve tweets. Each post is securely stored on the Celestia
+                        blockchain, ensuring tamper-proof and immutable content storage.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="comment-system">Comment System</h3>
+                    <p>Raven supports a nested reply system, allowing users to engage in dynamic discussions under
+                        posts. Each comment is stored securely on the blockchain, maintaining data integrity.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="likes-repost">Likes and Repost</h3>
+
+
+                    <h3 id="quote-tweets">Quote Tweets</h3>
+                    <p>Users can quote tweets, adding their thoughts and context while referencing original posts,
+                        further enriching the discussion within the Raven platform.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="chat-messaging">Chat and Messaging</h3>
+                    <p>Raven provides a decentralized chat system with end-to-end encryption (E2EE), ensuring private
+                        and secure messaging between users. All chat-related data is stored on-chain, enhancing security
+                        and reliability.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="treasure-hunt">Treasure Hunt</h3>
+                    <p>The Treasure Hunt feature is designed to increase engagement by allowing users to participate in
+                        gamified quests with rewards. Only verified Raven users can create hunts, while any user can
+                        participate.</p>
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="treasure-hunt-types">Treasure Hunt Types</h3>
+                    <ul>
+                        <li><b>Cumulative Reward Hunt</b>: Users pay an entry fee (set by the creator) in Raven Trust
+                            Token (RTT), and the first to complete the quest wins the entire pooled reward.</li>
+                        <li><b>Fixed Reward Hunt</b>: The creator sets a fixed reward in RTT, and participants join for
+                            free. The first user to solve the quest wins the pre-determined reward.</li>
+                    </ul>
+
+
+                    <hr class="hr-dash my-7">
+                    <h3 id="token-nft">Token and NFT System</h3>
+
+                    <h3 id="rtt">Raven Trust Token (RTT)</h3>
+                    <p>RTT serves as the native utility token within the Raven ecosystem, facilitating multiple use
+                        cases.</p>
+                    <ul>
+                        <li><b>Minting Verification Badges</b>: Users pay an entry fee (set by the creator) in Raven
+                            Trust Token (RTT), and the first to complete the quest wins the entire pooled reward.</li>
+                        <li><b>Treasure Hunt Participation</b>: The creator sets a fixed reward in RTT, and participants
+                            join for free. The first user to solve the quest wins the pre-determined reward.</li>
+                        <li><b>Reward Payment</b>: In Fixed Reward Hunts and Cumulative Reward Hunts, RTT is used to
+                            distribute rewards</li>
+                        <li><b>Chat Gifting System</b>: Users can send RTT as gifts within the chat feature, promoting
+                            user interactions and incentivizing engagement</li>
+                        <li><b></b>: </li>
+                    </ul>
+
+                    <h3 id="nft">Raven Verification Badge (RVB NFTs)</h3>
+                    <p>RVB Nft was introduce to serve as a verification method on the raven platform, minting a badge
+                        grant user verification on the raven app, which give user access to premium features.</p>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </main><!-- /.main-content -->
+
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-auto mr-auto">
+                    <nav class="nav justify-content-center justify-content-lg-start">
+                        <span>Built for <a href="https://x.com/celestia">@celestia mammothon</a> using <a
+                                href="https://x.com/chopinframework">Chopin Framework</a> on Upgrading the internet.
+                            [Chopin] Build a twitter(X) clone.</span>
+                    </nav>
+                </div>
+
+                <div class="col-lg-auto">
+                    <hr class="w-25 d-lg-none">
+                    <a href="https://x.com/RavenX3772">Raven Team</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /.footer -->
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/Ayphilip/appPics@main/page.min.js"></script>
+
+    <script>
+        'use strict';
+
+        $(function () {
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Configure your website
+            |--------------------------------------------------------------------------
+            |
+            | We provided several configuration variables for your ease of development.
+            | Read their complete description and modify them based on your need.
+            |
+            */
+
+            page.config({
+
+                /*
+                |--------------------------------------------------------------------------
+                | Google Analytics Tracking
+                |--------------------------------------------------------------------------
+                |
+                | If you want to use Google Analytics, you can specify your Tracking ID in
+                | this option. Your key would be a value like: UA-12345678-9
+                |
+                */
+
+                // googleAnalyticsId: 'UA-73325209-2',
+
+                /*
+                |--------------------------------------------------------------------------
+                | Smooth Scroll
+                |--------------------------------------------------------------------------
+                |
+                | If true, the browser's scrollbar moves smoothly on scroll and gives your
+                | visitor a better experience for scrolling.
+                |
+                */
+
+                smoothScroll: true,
+
+            });
+
+
+
+        });
+
+
+        //!function(e,t,n,s,u,a){e.formito_form='12m';u=t.createElement(n),u.async=!0,u.src='//script.formito.com/v1/formito.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a)}(window,document,'script');
+
+
+    </script>
+
+</body>
+
+</html>
